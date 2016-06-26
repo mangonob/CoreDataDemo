@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KxF-00-cp7">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--CoreData-->
+        <scene sceneID="RgF-xS-ps3">
+            <objects>
+                <tableViewController id="95D-WO-P1m" customClass="SongCoreDataTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" id="qlv-Sa-Nd0">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Nwx-zM-49B">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="input-outline" translatesAutoresizingMaskIntoConstraints="NO" id="WwE-l1-LJ7">
+                                    <rect key="frame" x="8" y="8" width="359" height="36"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2q-4U-9bQ" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="359" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="37"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhT-3Z-hs2" customClass="DWButton" customModule="CoreDataDemo" customModuleProvider="target">
+                                    <rect key="frame" x="192" y="96" width="175" height="36"/>
+                                    <color key="backgroundColor" red="0.11928989738225937" green="0.59777647256851196" blue="0.94218534231185913" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" image="add">
+                                        <color key="titleColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="addSongAction:" destination="95D-WO-P1m" eventType="touchUpInside" id="LRN-a1-b64"/>
+                                    </connections>
+                                </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="input-outline" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-X1-rEG">
+                                    <rect key="frame" x="8" y="52" width="359" height="36"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="singer" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAO-sj-ZSm" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="52" width="359" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="37"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="input-outline" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-oc-RFe">
+                                    <rect key="frame" x="8" y="96" width="176" height="36"/>
+                                </imageView>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="63P-vT-Vac" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="96" width="176" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                            <real key="value" value="37"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <pickerView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B8z-FQ-0Ms">
+                                    <rect key="frame" x="0.0" y="140" width="375" height="136"/>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cms-DS-hkP">
+                                    <rect key="frame" x="8" y="52" width="359" height="36"/>
+                                    <connections>
+                                        <segue destination="9Cw-2R-CBs" kind="push" id="iQL-0K-iNP"/>
+                                    </connections>
+                                </button>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-music" translatesAutoresizingMaskIntoConstraints="NO" id="qP8-ln-NC5">
+                                    <rect key="frame" x="16" y="8" width="21" height="36"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-user" translatesAutoresizingMaskIntoConstraints="NO" id="hLx-Fw-1tD">
+                                    <rect key="frame" x="17" y="52" width="19" height="36"/>
+                                </imageView>
+                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-clock-o" translatesAutoresizingMaskIntoConstraints="NO" id="wOV-ir-adP">
+                                    <rect key="frame" x="16" y="96" width="21" height="36"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" textLabel="BIJ-uz-d3E" detailTextLabel="ZhX-Lr-LV9" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="6gX-wF-gRS">
+                                <rect key="frame" x="0.0" y="312" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gX-wF-gRS" id="qSc-1P-zji">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BIJ-uz-d3E">
+                                            <rect key="frame" x="15" y="13" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZhX-Lr-LV9">
+                                            <rect key="frame" x="15" y="33" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="95D-WO-P1m" id="ovg-Es-BwB"/>
+                            <outlet property="delegate" destination="95D-WO-P1m" id="ziB-93-ufw"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="CoreData" id="3mh-vi-wvm"/>
+                    <connections>
+                        <outlet property="name" destination="a2q-4U-9bQ" id="87g-46-i6c"/>
+                        <outlet property="number" destination="63P-vT-Vac" id="nfw-Vo-dTy"/>
+                        <outlet property="picker" destination="B8z-FQ-0Ms" id="E4s-Gc-cwv"/>
+                        <outlet property="singer" destination="CAO-sj-ZSm" id="6wp-s1-zm3"/>
+                        <outlet property="topView" destination="Nwx-zM-49B" id="wj2-qj-Oci"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYv-dA-kwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cZO-ZC-ydw" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="151.5" y="596.5"/>
+        </scene>
+        <!--Singer-->
+        <scene sceneID="FSp-7o-hvR">
+            <objects>
+                <tableViewController id="9Cw-2R-CBs" customClass="SingerCoreDataViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" id="li2-rW-G6C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SingerCell" textLabel="i79-8C-anK" detailTextLabel="Nfl-MR-9r9" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="KdT-Rp-vx8">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KdT-Rp-vx8" id="6Uo-a5-vZe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i79-8C-anK">
+                                            <rect key="frame" x="15" y="13" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nfl-MR-9r9">
+                                            <rect key="frame" x="15" y="33" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9Cw-2R-CBs" id="A1d-Xo-7P5"/>
+                            <outlet property="delegate" destination="9Cw-2R-CBs" id="URs-u0-fBg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Singer" id="uRM-hx-wCf">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="A1Y-qO-yYM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WFP-14-hOV">
+                                <rect key="frame" x="16" y="7" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title=" Back" image="left">
+                                    <color key="titleColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cZO-ZC-ydw" kind="unwind" unwindAction="songCoreDataViewControllerUnwind:" id="xEU-NX-VY2"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="add" id="v83-RM-0hs">
+                            <connections>
+                                <segue destination="7jz-4B-wZH" kind="presentation" animates="NO" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="GRa-8T-ou5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CtL-gX-V5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="TZc-az-M9H" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="659.5" y="596.5"/>
+        </scene>
+        <!--Add Singer View Controller-->
+        <scene sceneID="WZW-wf-cRc">
+            <objects>
+                <viewController id="7jz-4B-wZH" customClass="AddSingerViewController" sceneMemberID="viewController">
+                    <visualEffectView key="view" opaque="NO" contentMode="scaleToFill" id="KrF-rK-cvi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="du9-0b-s9q">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-oV-RyT" customClass="DWView" customModule="CoreDataDemo" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="161" width="335" height="345"/>
+                                    <subviews>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="times" translatesAutoresizingMaskIntoConstraints="NO" id="Kmr-LB-xdn">
+                                            <rect key="frame" x="293" y="18" width="24" height="24"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D6-9g-Frf">
+                                            <rect key="frame" x="283" y="8" width="44" height="44"/>
+                                            <connections>
+                                                <segue destination="TZc-az-M9H" kind="unwind" unwindAction="singerCoreDataViewControllerUnwind:" id="yzf-Xc-Sw5"/>
+                                            </connections>
+                                        </button>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEL-Zs-h37" customClass="DWView" customModule="CoreDataDemo" customModuleProvider="target">
+                                            <rect key="frame" x="26" y="284" width="283" height="44"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-check" translatesAutoresizingMaskIntoConstraints="NO" id="iEL-24-5P8">
+                                                    <rect key="frame" x="128" y="11" width="27" height="21"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.090631090104579926" green="0.6258811354637146" blue="0.9113275408744812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nf7-As-Xuq">
+                                            <rect key="frame" x="26" y="284" width="283" height="44"/>
+                                            <connections>
+                                                <segue destination="TZc-az-M9H" kind="unwind" unwindAction="singerCoreDataViewControllerUnwind:" id="MgV-ls-euQ"/>
+                                            </connections>
+                                        </button>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="outline-white" translatesAutoresizingMaskIntoConstraints="NO" id="r78-EH-x98">
+                                            <rect key="frame" x="26" y="60" width="283" height="40"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="outline-white" translatesAutoresizingMaskIntoConstraints="NO" id="m6P-IY-PiK">
+                                            <rect key="frame" x="26" y="176" width="283" height="40"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="outline-white" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-Wo-U4W">
+                                            <rect key="frame" x="26" y="119" width="283" height="40"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-stack-overflow-white" translatesAutoresizingMaskIntoConstraints="NO" id="t06-3c-Cuv">
+                                            <rect key="frame" x="36" y="184" width="19" height="24"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-user-white" translatesAutoresizingMaskIntoConstraints="NO" id="Iho-Ba-BAw">
+                                            <rect key="frame" x="36" y="70" width="19" height="20"/>
+                                        </imageView>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="fa-calendar-white" translatesAutoresizingMaskIntoConstraints="NO" id="M4x-IH-0uG">
+                                            <rect key="frame" x="35" y="127" width="21" height="23"/>
+                                        </imageView>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="detail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-XB-saA" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                            <rect key="frame" x="26" y="176" width="283" height="40"/>
+                                            <color key="textColor" red="0.94901508092880249" green="0.9497341513633728" blue="0.94912642240524292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="38"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xlu-0G-zbj" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                            <rect key="frame" x="26" y="119" width="283" height="40"/>
+                                            <color key="textColor" red="0.94901508092880249" green="0.9497341513633728" blue="0.94912642240524292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="38"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CGj-LA-RdR" customClass="DWTextField" customModule="CoreDataDemo" customModuleProvider="target">
+                                            <rect key="frame" x="26" y="60" width="283" height="40"/>
+                                            <color key="textColor" red="0.94901508092880249" green="0.9497341513633728" blue="0.94912642240524292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                    <real key="value" value="38"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                    <color key="value" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2P-AS-8XB">
+                                            <rect key="frame" x="26" y="119" width="283" height="40"/>
+                                            <connections>
+                                                <action selector="showDatePicker:" destination="7jz-4B-wZH" eventType="touchUpInside" id="NYj-n0-DUN"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.57821768522262573" green="0.57867127656936646" blue="0.57828789949417114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <datePicker hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pge-Ln-uWR">
+                                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="488786807.11400002">
+                                        <!--2016-06-28 06:06:47 +0000-->
+                                    </date>
+                                </datePicker>
+                            </subviews>
+                        </view>
+                        <blurEffect style="light"/>
+                    </visualEffectView>
+                    <navigationItem key="navigationItem" id="IJh-b7-tcu"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="birthday" destination="Xlu-0G-zbj" id="Wb7-yd-Pvb"/>
+                        <outlet property="datePicker" destination="Pge-Ln-uWR" id="Nz4-y6-Kde"/>
+                        <outlet property="detail" destination="pVb-XB-saA" id="Uw7-Op-GsM"/>
+                        <outlet property="inputView" destination="4Fh-oV-RyT" id="uME-pj-Cx4"/>
+                        <outlet property="name" destination="CGj-LA-RdR" id="SOw-FZ-EbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="deO-Ba-l8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1171.5" y="596.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MLJ-Da-F9t">
+            <objects>
+                <navigationController id="KxF-00-cp7" customClass="NavigationController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vwG-Wi-tx1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.10482466965913773" green="0.55594462156295776" blue="0.93191331624984741" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99963909387588501" green="1" blue="0.99975615739822388" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="95D-WO-P1m" kind="relationship" relationship="rootViewController" id="f3M-tq-0cL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Blj-x1-dta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="597"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="20" height="20"/>
+        <image name="fa-calendar-white" width="21" height="23"/>
+        <image name="fa-check" width="27" height="21"/>
+        <image name="fa-clock-o" width="21" height="21"/>
+        <image name="fa-music" width="21" height="23"/>
+        <image name="fa-stack-overflow-white" width="19" height="24"/>
+        <image name="fa-user" width="19" height="21"/>
+        <image name="fa-user-white" width="19" height="20"/>
+        <image name="input-outline" width="7" height="44"/>
+        <image name="left" width="11" height="20"/>
+        <image name="outline-white" width="7" height="30"/>
+        <image name="times" width="24" height="24"/>
+    </resources>
+</document>
